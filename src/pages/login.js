@@ -17,7 +17,8 @@ const styles = {
         textAlign: "center"
     },
     image: {
-        margin: "20px auto 20px auto"
+        margin: "20px auto 20px auto",
+        width: "120px"
     },
     pageTitle: {
         margin: "10px auto 10px auto"
@@ -37,7 +38,7 @@ const styles = {
     progress: {
         position: "absolute"
     }
-};
+}
 
 class login extends Component {
     constructor(){
@@ -62,6 +63,7 @@ class login extends Component {
         axios.post("/login", userData)
             .then(res => {
                 console.log(res.data);
+                localStorage.setItem("FBIdToken", `Bearer ${res.data.token}`);
                 this.setState({
                     loading: false
                 });
