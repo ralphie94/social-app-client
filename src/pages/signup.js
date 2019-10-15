@@ -55,6 +55,12 @@ class signup extends Component {
         };
     }
 
+    componentWillReceiveProps(nextProps){
+        if(nextProps.UI.errors){
+            this.setState({ errors: nextProps.UI.errors });
+        }
+    }
+
     handleSubmit = (event) => {
         event.preventDefault();
         this.setState({
@@ -117,7 +123,7 @@ signup.propTypes = {
     classes: PropTypes.object.isRequired,
     user: PropTypes.object.isRequired,
     UI: PropTypes.object.isRequired,
-    logoutUser: PropTypes.func.isRequired
+    signupUser: PropTypes.func.isRequired
 
 };
 
