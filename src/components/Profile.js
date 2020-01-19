@@ -15,6 +15,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 // Redux
 import { connect } from 'react-redux';
+import { logoutUser, uploadImage } from "../redux/actions/userActions";
 
 // Icons
 import LocationOn from "@material-ui/icons/LocationOn";
@@ -72,7 +73,9 @@ const styles = (theme) => ({
 class Profile extends Component {
     handleImageChange = (event) => {
         const image = event.target.files[0];
-        // send to server
+        const formData = new FormData();
+        formData.append("image", image, image.name);
+        this.props.uploadImage(formData);
     };
     handleEditPicture = () => {
         const fileInput = document.getElementById("imageInput");
@@ -147,11 +150,15 @@ class Profile extends Component {
 
 const mapStateToProps = (state) => ({
     user: state.user
-})
+});
+
+const mapActionsToProps = { logoutUser, uploadImage };
 
 Profile.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    uploadImage: PropTypes.func.isRequired,
     user: PropTypes.object.isRequired,
     classes: PropTypes.object.isRequired
 }
 
-export default connect(mapStateToProps)(withStyles(styles)(Profile));
+export default connect(mapStateToProps, mapActionsToProps)(withStyles(styles)(Profile));
