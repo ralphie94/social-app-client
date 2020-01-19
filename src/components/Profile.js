@@ -137,6 +137,7 @@ class Profile extends Component {
                                 <KeyboardReturn color="primary"/>
                             </IconButton>
                     </Tooltip>
+                    <EditDetails/>
                 </div>
             </Paper>
         ) : (
