@@ -33,7 +33,7 @@ const styles = {
     }
 }
 
-class Scream extends Component {
+export class Scream extends Component {
     likedScream = () => {
         if (
             this.props.user.likes && 
@@ -73,7 +73,7 @@ class Scream extends Component {
                         <FavoriteBorder color="primary"/>
                     </Link>
                 </MyButton>
-            ) : (
+            ) : 
                 this.likedScream() ? (
                     <MyButton tip="Undo Like" onClick={this.unlikeScream}>
                         <FavoriteIcon color="primary"/>
@@ -83,7 +83,6 @@ class Scream extends Component {
                         <FavoriteBorder color="primary"/>
                     </MyButton>
                 )
-            )
         return (
             <Card className={classes.card}>
                 <CardMedia
