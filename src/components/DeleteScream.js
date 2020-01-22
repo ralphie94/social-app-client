@@ -15,7 +15,7 @@ import { deleteScream } from "../redux/actions/dataActions";
 
 const styles = {
 
-}
+  };
 
 class DeleteScream extends Component {
     state = {
