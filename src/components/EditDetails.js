@@ -78,8 +78,8 @@ class EditDetails extends Component {
     mapUserDetailsToState = (credentials) => {
         this.setState({
             bio: credentials.bio ? credentials.bio : "",
-            website: credentials.bio ? credentials.website : "",
-            location: credentials.bio ? credentials.location : ""
+            website: credentials.website ? credentials.website : "",
+            location: credentials.location ? credentials.location : ""
         })
     }
 
