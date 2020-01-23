@@ -30,8 +30,8 @@ export default function(state = initialState, action){
                 ...state
             };
         case DELETE_SCREAM:
-            index = state.screams.findIndex((scream) => scream.screamId === action.payload);
-            state.screams.splice(index, 1);
+            let i = state.screams.findIndex((scream) => scream.screamId === action.payload);
+            state.screams.splice(i, 1);
             return {
                 ...state
             }
