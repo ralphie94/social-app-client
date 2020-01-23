@@ -69,4 +69,8 @@ export const deleteScream = (screamId) => (dispatch) => {
             dispatch({ type: DELETE_SCREAM, payload: screamId })
         })
         .catch(err => console.log(err));
+};
+
+export const clearErrors = () => dispatch => {
+    dispatch({ type: CLEAR_ERRORS });
 }
