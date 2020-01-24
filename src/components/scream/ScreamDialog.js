@@ -4,6 +4,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import MyButton from "../../util/MyButton";
 import LikeButton from './LikeButton';
 import Comments from "./Comments";
+import CommentForm from "./CommentForm";
 import dayjs from "dayjs";
 import { Link } from "react-router-dom";
 
@@ -164,6 +165,7 @@ class ScreamDialog extends Component {
                     <span>{commentCount} Comments</span>
                 </Grid>
                 <hr className={classes.visibleSeparator}/>
+                <CommentForm screamId={screamId}/>
                 <Comments comments={comments}/>
             </Grid>
         )
