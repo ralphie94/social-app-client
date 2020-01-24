@@ -1,6 +1,5 @@
 import { SET_SCREAMS, LOADING_DATA, LIKE_SCREAM, UNLIKE_SCREAM, DELETE_SCREAM, SET_ERRORS, POST_SCREAM, CLEAR_ERRORS, LOADING_UI, SET_SCREAM, STOP_LOADING_UI } from "../types";
 import axios from "axios";
-import { log } from "util";
 
 // Get all screams
 export const getScreams = () => dispatch => {

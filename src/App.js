@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme"
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
 import jwtDecode from "jwt-decode";
 import AuthRoute from "./util/AuthRoute";
 

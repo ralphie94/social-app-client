@@ -1,5 +1,4 @@
 import { SET_ERRORS, CLEAR_ERRORS, LOADING_UI, STOP_LOADING_UI } from "../types";
-import { truncate } from "fs";
 
 const initialState = {
     loading: false,
