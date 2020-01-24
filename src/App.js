@@ -4,6 +4,7 @@ import './App.css';
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import createMuiTheme from "@material-ui/core/styles/createMuiTheme"
 import Navbar from "./components/layout/Navbar";
+import themeObject from "./util/theme";
 import jwtDecode from "jwt-decode";
 import AuthRoute from "./util/AuthRoute";
 
@@ -20,25 +21,7 @@ import signup from "./pages/signup";
 import user from "./pages/user"
 import axios from "axios";
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: "#33ab9f",
-      main: "#009688",
-      dark: "#00695f",
-      contrastText: "#fff"
-    },
-    secondary: {
-      light: '#ff6333',
-      main: '#ff3d00',
-      dark: '#b22a00',
-      contrastText: '#fff'
-    }
-  },
-  typography: {
-    useNextVariants: true
-  }
-})
+const theme = createMuiTheme(themeObject);
 
 const token = localStorage.FBIdToken;
 if(token){
