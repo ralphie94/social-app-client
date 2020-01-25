@@ -24,7 +24,8 @@ const styles = {
     card: {
         position: "relative",
         display: "flex",
-        marginBottom: 20
+        marginBottom: 20,
+        marginRight: 20
     },
     image: {
         minWidth: 200
@@ -91,7 +92,7 @@ Scream.propTypes = {
     user: PropTypes.object.isRequired,
     scream: PropTypes.object.isRequired,
     classes: PropTypes.object.isRequired,
-    openDialog: ProcessingInstruction.bool
+    openDialog: PropTypes.bool
 }
 
 const mapStateToProps = state => ({
