@@ -9,7 +9,7 @@ const initialState = {};
 
 const middleware = [thunk];
 
-const composeEnhancers = !process.env.NODE_ENV ? (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose) : compose
+const composeEnhancers = (process.env.NODE_ENV !== "production" && typeof window !== "undefined" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 const reducers = combineReducers({
     user: userReducer,
