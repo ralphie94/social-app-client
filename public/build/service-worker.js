@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-undef */
 /**
  * Welcome to your Workbox-powered service worker!
  *

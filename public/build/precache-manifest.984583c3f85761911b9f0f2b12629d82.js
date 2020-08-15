@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ba3d2072340cb7e74a9f4ec5a6d27871",
