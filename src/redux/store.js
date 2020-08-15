@@ -9,6 +9,8 @@ const initialState = {};
 
 const middleware = [thunk];
 
+const composeEnhancers = !process.env.NODE_ENV ? (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose) : compose
+
 const reducers = combineReducers({
     user: userReducer,
     data: dataReducer,
@@ -18,7 +20,7 @@ const reducers = combineReducers({
 const store = createStore(
     reducers, 
     initialState, 
-    compose(
+    composeEnhancers(
         applyMiddleware(...middleware)
     )
 );
